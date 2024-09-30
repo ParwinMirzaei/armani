@@ -1,123 +1,56 @@
+:root {
+    --text-color:#102245;
+    --link-color: #4a76ee;
+    --background-color: #96a6c5;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
 }
 
-header {
-    display: flex;                
-    justify-content: space-between;
-    align-items: center;         
-    padding: 10px 20px;        
-    background-color: #333;   
-    color: white; 
-}
-
-.logo {
-    font-size: 24px;
-    margin-left: 20px;         
-}
-
-nav {
-    display: flex;
-    margin-right: 20px;               
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-header img {
-    max-width: 20px; 
-    height: 10;
-    text-align: left;
-}
-
-nav {
-    display: flex;
-    text-align: right;
-}
-
-nav a {
+a {
+    color: var(--link-color);
     text-decoration: none;
+}
+
+/* NAVBAR */
+
+nav  {display: flex;
+justify-content: space-between; 
+align-items: center;
+padding: 10px 50px; 
+flex-wrap: nowrap; 
+}
+
+nav .left img {
+    max-width: 250px;
+    height: auto;
+}
+
+nav .right {
+    display: flex;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+nav .right a {
+    text-decoration: none; 
     color: #333;
-    margin-left: 20px; 
-    font-weight: 600;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #52565a; 
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-table th {
-    background-color: #f2f2f2;
-}
-
-ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;           /* Remove default padding */
-    margin: 0;            /* Remove default margin */
-    display: flex;        /* Use flexbox to layout the items horizontally */
-    justify-content: space-around; /* Space items evenly */
-    flex-wrap: wrap;      /* Allow wrapping to next line if needed */
-}
-
-li {
-    text-align: center;   /* Center the text under each image */
-    margin: 10px;        /* Add some margin around each list item */
-}
-
-img {
-    display: block;       /* Ensures there is no space below images */
-    margin: 0 auto;      /* Center the image in the list item */
-    width: 350px;        /* Set a fixed width */
-    height: 250px;       /* Set a fixed height */
-}
-
-
-form {
-    margin: 20px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #007bff;
-    outline: none;
+nav .right a:hover {
+    color: #007bff; 
 }

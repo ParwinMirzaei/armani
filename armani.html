@@ -7,56 +7,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-        
-    <title>Armani</title>
-</head>
-    <header>
-        <div class="container">
-            <img src="giorgio-armani-icon-logo-symbol-600nw-2425801211.webp" alt="Armani logo" width="300" height="150"/>
-            
-            <nav>
-                <a href="#home"><i class="fas fa-home"></i> Home</a>
-                <a href="#About"><i class="fas fa-info-circle"></i> About</a>
-                <a href="#services"><i class="fas fa-laptop-code"></i> Services</a>
-                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-            </nav>
-        </div>
-    </header>
-    
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Your Page Title</title>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="left">
+            <img src="giorgio-armani-icon-logo-symbol-600nw-2425801211.webp" alt="Armani logo" width="200" height="auto">
+        </div>
+        <div class="right">
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#services"><i class="fas fa-laptop-code"></i> Services</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+    </nav>
+    
+    <main>
+        <!-- SECTION 1: Home -->
+    <div id="home" class="Home">
+        <div class="home">
+            <p>"At Armani, Every Fragrance is a Whisper You’ll Never Forget."</p>
+        </div>
+        <div class="image-container">
+            <img src="Advertising-Si-by-giorgio-armani-edp-100ml-for-women-perfume-buy.jpg" alt="Image Related to Armani">
+        </div>
+    </div>
 
+      <!-- SECTION 2: About -->
 
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td align="left" valign="top" width="50%" class="quote">
-                <p>"At Armani, Every Fragrance is a Whisper You’ll Never Forget."</p>
-            </td>
-            <td align="right" valign="top" width="50%">
-                <img src="Advertising-Si-by-giorgio-armani-edp-100ml-for-women-perfume-buy.jpg" alt="Image Related to Armani" style="width: 100%; height: auto;">
-            </td>
-        </tr>
-    </table>
+    <div id="about" class="About">
+        <div class="About">
+            <h1>"We Are the Whisper of Unforgettable Moments"</h1>
+            <img src="https://i.makeupstore.de/r/rd/rdppgfypx7b1.jpg" alt="In Love With You" width="350" height="250" />
+            <p>In Love With You</p>
+        
+            <img src="https://m.media-amazon.com/images/I/61XAym-FT2L.jpg" alt="Because It's You" width="350" height="250" />
+            <p>Because It's You</p>
+      
+            <img src="https://i1.perfumesclub.com/grande/108209-3.jpg" alt="Stronger With You" width="350" height="250" />
+            <p>Stronger With You</p>
+        </div>
+    </div>
 
-    <!-- Product List -->
-    <ul>
-        <li>
-            <img src="https://i.makeupstore.de/r/rd/rdppgfypx7b1.jpg" alt="In Love With You"/>
-            In Love With You
-        </li>
-        <li>
-            <img src="https://m.media-amazon.com/images/I/61XAym-FT2L.jpg" alt="Because It's You"/>
-            Because It's You
-        </li>
-        <li>
-            <img src="https://i1.perfumesclub.com/grande/108209-3.jpg" alt="Stronger With You"/>
-            Stronger With You
-        </li>
-    </ul>
-
-    <!-- Product Table -->
-    <table>
+    <!-- SECTION 3: Services -->
+    <div id="services" class="Services">
+        <h1>Services</h1>
+     <table>
         <tr>
             <th>Products</th>
             <th>Price</th> 
@@ -74,7 +72,9 @@
         </tr>
     </table>
 
-    <!-- Contact Form -->
+    <!-- SECTION 4: Contact Form -->
+    <div id="contact" class="Contact">
+        <h1>Contact Us</h1>
     <form>
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Enter your name" required>
@@ -82,5 +82,6 @@
         <label for="message">Message</label>
         <textarea name="message" rows="5" cols="30" placeholder="Enter your message" required></textarea>
     </form>
+    </main>
 </body>
 </html>
