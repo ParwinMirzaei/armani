@@ -12,12 +12,22 @@ body {
 }
 
 header {
-    display: flex;
+    display: flex;                
     justify-content: space-between;
-    align-items: center;
-    background-color: #322e2e;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(101, 91, 91, 0.1);
+    align-items: center;         
+    padding: 10px 20px;        
+    background-color: #333;   
+    color: white; 
+}
+
+.logo {
+    font-size: 24px;
+    margin-left: 20px;         
+}
+
+nav {
+    display: flex;
+    margin-right: 20px;               
 }
 
 header .container {
@@ -66,21 +76,26 @@ table th {
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;           /* Remove default padding */
+    margin: 0;            /* Remove default margin */
+    display: flex;        /* Use flexbox to layout the items horizontally */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap;      /* Allow wrapping to next line if needed */
 }
 
-ul li {
-    text-align: center;
+li {
+    text-align: center;   /* Center the text under each image */
+    margin: 10px;        /* Add some margin around each list item */
 }
 
-ul img {
-    max-width: 10px;
-    height: auto;
+img {
+    display: block;       /* Ensures there is no space below images */
+    margin: 0 auto;      /* Center the image in the list item */
+    width: 350px;        /* Set a fixed width */
+    height: 250px;       /* Set a fixed height */
 }
+
 
 form {
     margin: 20px;
