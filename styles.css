@@ -115,6 +115,7 @@ nav .right a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    border-radius: 50px;
 }
 
 
@@ -122,6 +123,9 @@ nav .right a:hover {
     text-align: center;
 }
 
+.image-box img {
+    border-radius: 50px;
+}
 
 .item-selection {
     margin-top: 10px; 
@@ -167,6 +171,22 @@ form textarea {
 
 form textarea {
     resize: vertical;
+}
+
+#contact form input[type="submit"] {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    margin: 0 auto;
+    background-color: #3b9cb0; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #043257;
 }
 
 
