@@ -21,10 +21,11 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    background-image: url('https://lh3.googleusercontent.com/proxy/UNDNMQhcHwAJk575TgZ4WnfDBCliDjcuFJR2F89c5Sbdf8Lm1xI8txgIpcsRj-VVY50rLGh1j32gHjT3oZU4ZMaHYqrQRx5TRLPPeGWoKFIgqPOcoNoNPtClRSN5KdQdn0ozHSoqChbxDJ0qsjIboNOFcCJm3qQsrKsSbSkgjHt44ZxHhWzDNv8Od7zYykxeYnz-1TLTKW_AYsKSJjYLkJCzK5FqB1fDxhQ_U64uGqm9AOY5zs0dhw');
+    background-image: url("/images/unnamed.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 30rem;
 }
 
 a {
