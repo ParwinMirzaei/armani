@@ -18,12 +18,11 @@ html {
 }
 
 
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    background-image: url('https://lh3.googleusercontent.com/proxy/UNDNMQhcHwAJk575TgZ4WnfDBCliDjcuFJR2F89c5Sbdf8Lm1xI8txgIpcsRj-VVY50rLGh1j32gHjT3oZU4ZMaHYqrQRx5TRLPPeGWoKFIgqPOcoNoNPtClRSN5KdQdn0ozHSoqChbxDJ0qsjIboNOFcCJm3qQsrKsSbSkgjHt44ZxHhWzDNv8Od7zYykxeYnz-1TLTKW_AYsKSJjYLkJCzK5FqB1fDxhQ_U64uGqm9AOY5zs0dhw'); /* Add your background image URL here */
-    background-position: center center;
+    background-image: url('https://lh3.googleusercontent.com/proxy/UNDNMQhcHwAJk575TgZ4WnfDBCliDjcuFJR2F89c5Sbdf8Lm1xI8txgIpcsRj-VVY50rLGh1j32gHjT3oZU4ZMaHYqrQRx5TRLPPeGWoKFIgqPOcoNoNPtClRSN5KdQdn0ozHSoqChbxDJ0qsjIboNOFcCJm3qQsrKsSbSkgjHt44ZxHhWzDNv8Od7zYykxeYnz-1TLTKW_AYsKSJjYLkJCzK5FqB1fDxhQ_U64uGqm9AOY5zs0dhw');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -65,49 +64,39 @@ nav .right a:hover {
 }
 
 /* SECTION 1: Home */
-#home {
+.home-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh; 
-    padding: 0;
-    text-align: center;
+    height: 100vh;
+    padding: 0 5%;
 }
 
-.home h1 {
-    font-size: 28px;
-    margin: 0; 
+/* Right side content styling */
+.left-content {
+    width: 40%; 
+    text-align: left;
 }
 
-.home p {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0; 
+/* Right side content styling */
+.right-content {
+    width: 40%; 
+    text-align: right;
 }
 
-/* SECTION 2: About */
-#about {
-    text-align: center;
-    padding: 10px 0; 
-    margin-top: 0;
+.home-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.about-content h1 {
-    font-size: 28px;
-    margin: 10px 0; 
+.home-content p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.about-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 20px; /* Adjust bottom margin */
-}
 
-/* SECTION 3: Shop */
+/* SECTION 2: Shop */
 .shop {
     padding: 50px 20px; 
     text-align: center; 
@@ -143,7 +132,7 @@ nav .right a:hover {
 }
 
 
-/* SECTION 4: Contact */
+/* SECTION 3: Contact */
 .contact h1 {
     font-size: 30px;
     text-align: center;
@@ -179,7 +168,7 @@ form textarea {
 }
 
 
-/* SECTION 5: Footer */
+/* SECTION 4: Footer */
 footer {
     background-color: var(--header-color);
     padding: 20px 0;
