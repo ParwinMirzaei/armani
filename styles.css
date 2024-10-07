@@ -38,8 +38,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px; 
-}
+    padding: 20px 50px;
+} 
 
 nav .left img {
     max-width: 200px; 
