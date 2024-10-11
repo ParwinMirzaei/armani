@@ -329,9 +329,25 @@ footer .social a:hover {
     }
 
     /* Contact Form */
+    .contact {
+        padding: 0 15px;
+    }
+    form {
+        text-align: center;
+        padding: 10px;
+    }
+
     form input[type="text"],
     form textarea {
         max-width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
+    form textarea {
+        resize: vertical;
     }
 
     form label {
