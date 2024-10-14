@@ -266,7 +266,6 @@ footer .social a:hover {
     }
 
     .image-box img {
-        flex-direction: row;
         width: 100%;
         max-width: 300px;
         height: auto;
@@ -392,6 +391,9 @@ footer .social a:hover {
     }
 
     /* Shop Section */
+    .image-row {
+        flex-direction: column;
+    }
     .image-box img {
         max-width: 150px;
     }
