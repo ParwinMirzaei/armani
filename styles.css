@@ -266,6 +266,7 @@ footer .social a:hover {
     }
 
     .image-box img {
+        flex-direction: row;
         width: 100%;
         max-width: 300px;
         height: auto;
