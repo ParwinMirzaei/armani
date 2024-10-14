@@ -221,8 +221,8 @@ footer .social a:hover {
 
 
 
-/* For Tablets and Small Laptops (up to 850px) */
-@media (max-width: 850px) {
+/* For Tablets and Small Laptops */
+@media 	(min-width: 769px ) and (max-width: 1024px) {
     /* Navbar */
     nav {
         padding: 15px 20px; 
@@ -278,8 +278,8 @@ footer .social a:hover {
     }
 }
 
-/* For Phones (up to 740px) */
-@media (max-width: 740px) {
+/* For Phones */
+@media (min-width: 481px ) and (max-width: 768px) {
     /* Navbar */
     nav {
         flex-direction: column;
@@ -366,7 +366,7 @@ footer .social a:hover {
 }
 
 /* For Small phones */
-@media (max-width: 500px) {
+@media 	(min-width: 320px ) and (max-width: 480px) {
     /* Navbar */
     nav {
         padding: 10px;
