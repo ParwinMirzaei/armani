@@ -311,45 +311,6 @@ footer .social a:hover {
         background-color: #94c1bc;
     }
 
-    
-      /* Hide the right links by default */
-      .right {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #fff;
-        width: 100%;
-        padding: 20px 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Show the hamburger icon on mobile */
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show the links when active (toggled by JS) */
-    .right.active {
-        display: flex;
-    }
-
-    /* Style the links on mobile */
-    .right a {
-        font-size: 18px;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-        display: block;
-    }
-
-    /* Ensure the logo resizes well on mobile */
-    nav .left img {
-        max-width: 150px;
-    }
-
     /* Navbar */    
     nav {
         flex-direction: column;
@@ -441,44 +402,6 @@ footer .social a:hover {
     body {
         background-image: none;
         background-color: #94c1bc;
-    }
-
-      /* Hide the right links by default */
-      .right {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #fff;
-        width: 100%;
-        padding: 20px 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Show the hamburger icon on mobile */
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show the links when active (toggled by JS) */
-    .right.active {
-        display: flex;
-    }
-
-    /* Style the links on mobile */
-    .right a {
-        font-size: 18px;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-        display: block;
-    }
-
-    /* Ensure the logo resizes well on mobile */
-    nav .left img {
-        max-width: 150px;
     }
 
     
