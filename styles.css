@@ -404,6 +404,7 @@ footer .social a:hover {
 
     /* Shop Section */
     .image-row {
+        background-color: #94c1bc;
         flex-direction: column;
     }
     .image-box img {
