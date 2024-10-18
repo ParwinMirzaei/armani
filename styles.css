@@ -280,7 +280,15 @@ footer .social a:hover {
 
 /* For Phones */
 @media  (min-width: 481px ) and (max-width: 768px) {
-    /* Navbar */
+    /* Removing background */
+    .home-content, 
+    .shop, 
+    .contact {
+        background-image: none;
+        background-color: transparent;
+}
+
+    /* Navbar */    
     nav {
         flex-direction: column;
         padding: 10px;
@@ -367,6 +375,14 @@ footer .social a:hover {
 
 /* For Small phones */
 @media (min-width: 320px ) and (max-width: 480px) {
+    /* Removing background */
+    .home-content, 
+    .shop, 
+    .contact {
+        background-image: none;
+        background-color: transparent;
+}
+    
     /* Navbar */
     nav {
         padding: 10px;
