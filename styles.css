@@ -70,7 +70,7 @@ nav .right a:hover {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    padding: 0 5%;
+    padding: 0;
 }
 
 /* Right side content styling */
@@ -406,7 +406,7 @@ footer .social a:hover {
     .shop {
         background-color: #94c1bc;
     }
-    
+
     .image-row {
         flex-direction: column;
     }
