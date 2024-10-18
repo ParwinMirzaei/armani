@@ -65,6 +65,9 @@ nav .right a:hover {
 }
 
 /* SECTION 1: Home */
+#home {
+    margin-top: 50px;
+}
 .home-content {
     display: flex;
     justify-content: space-between;
