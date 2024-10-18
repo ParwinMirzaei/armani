@@ -71,7 +71,7 @@ nav .right a:hover {
 .home-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 5%;
     padding-bottom: 20px;
 }
