@@ -403,8 +403,11 @@ footer .social a:hover {
     }
 
     /* Shop Section */
-    .image-row {
+    .shop {
         background-color: #94c1bc;
+    }
+    
+    .image-row {
         flex-direction: column;
     }
     .image-box img {
