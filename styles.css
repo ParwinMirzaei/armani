@@ -95,6 +95,7 @@ nav .right a:hover {
 .home-content h1 {
     font-size: 20px;
     text-align: center;
+    margin-top: 0;
 }
 
 .home-content p {
