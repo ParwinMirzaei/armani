@@ -281,12 +281,10 @@ footer .social a:hover {
 /* For Phones */
 @media  (min-width: 481px ) and (max-width: 768px) {
     /* Removing background */
-    .home-content, 
-    .shop, 
-    .contact {
+    body {
         background-image: none;
-        background-color: transparent;
-}
+        background-color: #94c1bc;
+    }
 
     /* Navbar */    
     nav {
@@ -376,12 +374,10 @@ footer .social a:hover {
 /* For Small phones */
 @media (min-width: 320px ) and (max-width: 480px) {
     /* Removing background */
-    .home-content, 
-    .shop, 
-    .contact {
+    body {
         background-image: none;
-        background-color: transparent;
-}
+        background-color: #94c1bc;
+    }
     
     /* Navbar */
     nav {
