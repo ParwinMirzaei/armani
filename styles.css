@@ -56,9 +56,16 @@ nav .right {
 
 
 nav .right a {
+    margin: 0 15px;
+    font-size: 16px;
     text-decoration: none;
+    display: flex;
     color: #333;
     font-size: 16px;
+}
+
+nav .right a i {
+    margin-right: 8px; /* Space between the icon and text */
 }
 
 nav .right a:hover {
@@ -311,6 +318,16 @@ footer .social a:hover {
         margin-top: 10px;
     }
 
+    .right a {
+        font-size: 0; /* Hides the text without affecting the icons */
+    }
+
+    /* Keep the icons visible */
+    .right a i {
+        font-size: 24px; /* Adjust icon size if needed */
+        margin-right: 0; /* Remove gap between icon and hidden text */
+    }
+
     /* Home Section */
     .home-content {
         flex-direction: column;
@@ -401,6 +418,10 @@ footer .social a:hover {
     nav .right {
         flex-direction: column;
         gap: 10px; 
+    }
+
+    .right a i {
+        font-size: 20px; /* Further adjustment of icon size for small phones */
     }
 
     /* Home Section */
