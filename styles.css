@@ -318,16 +318,6 @@ footer .social a:hover {
         margin-top: 10px;
     }
 
-    .right a {
-        font-size: 0; /* Hides the text without affecting the icons */
-    }
-
-    /* Keep the icons visible */
-    .right a i {
-        font-size: 24px; /* Adjust icon size if needed */
-        margin-right: 0; /* Remove gap between icon and hidden text */
-    }
-
     /* Home Section */
     .home-content {
         flex-direction: column;
@@ -418,10 +408,6 @@ footer .social a:hover {
     nav .right {
         flex-direction: column;
         gap: 10px; 
-    }
-
-    .right a i {
-        font-size: 20px; /* Further adjustment of icon size for small phones */
     }
 
     /* Home Section */
