@@ -103,8 +103,6 @@ nav .right a:hover {
     font-weight: bold;
 }
 
-/* Add these styles to your existing CSS file */
-
 /* Basket Items Container */
 #basketItems {
     padding: 10px; /* Add padding around the items container */
@@ -138,8 +136,6 @@ nav .right a:hover {
 #basketItems button:hover {
     background-color: #c82333; /* Darker red on hover */
 }
-
-
 
 /* SECTION 1: Home */
 #home {
