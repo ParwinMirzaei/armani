@@ -1,50 +1,47 @@
 // Select elements
-const basketCount = document.getElementById('basketCount');
 const basketItems = document.getElementById('basketItems');
-const clearBasketButton = document.getElementById('clearBasket');
-
-// Array to hold items in the basket (use localStorage to persist data)
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Function to update the cart display
-function updateBasketItems() {
-    basketItems.innerHTML = ''; // Clear current items
-    cart.forEach((item, index) => {
-        const itemDiv = document.createElement('div');
-        itemDiv.textContent = `${item.name} - Quantity: ${item.quantity}`;
-        
-        // Create remove button
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = () => {
-            removeFromCart(index); // Call remove function on click
-        };
-        
-        itemDiv.appendChild(removeButton);
-        basketItems.appendChild(itemDiv);
-    });
-    updateBasketCount();
+// Display items in the cart
+function displayCartItems() {
+    basketItems.innerHTML = ''; // Clear existing items in the cart display
+    if (cart.length === 0) {
+        basketItems.innerHTML = '<p>Your cart is empty.</p>'; // Message for empty cart
+    } else {
+        cart.forEach((item, index) => {
+            // Create a div for each item in the cart
+            const itemDiv = document.createElement('div');
+            itemDiv.style.display = 'flex';
+            itemDiv.style.alignItems = 'center';
+            itemDiv.style.padding = '5px 0';
+
+            // Display item name and quantity
+            const itemText = document.createElement('span');
+            itemText.textContent = `${item.name} - Quantity: ${item.quantity}`;
+            itemText.style.flexGrow = '1'; // Allow the item text to take remaining space
+            itemDiv.appendChild(itemText);
+
+            // Add a "Remove" button for each item
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.style.marginLeft = '10px'; // Space between item text and button
+            removeButton.onclick = () => {
+                removeFromCart(index); // Remove item on button click
+            };
+            itemDiv.appendChild(removeButton);
+
+            // Append the item div to the basket items container
+            basketItems.appendChild(itemDiv);
+        });
+    }
 }
 
-// Function to update the basket count
-function updateBasketCount() {
-    const totalCount = cart.reduce((acc, curr) => acc + curr.quantity, 0);
-    basketCount.textContent = totalCount; // Update count
-}
-
-// Function to remove item from the cart
+// Remove item from cart
 function removeFromCart(index) {
-    cart.splice(index, 1); // Remove item from the cart
-    localStorage.setItem('cart', JSON.stringify(cart)); // Save updated cart to localStorage
-    updateBasketItems(); // Refresh the display
+    cart.splice(index, 1); // Remove item from cart array by index
+    localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage with new cart
+    displayCartItems(); // Refresh cart display
 }
 
-// Function to clear the cart
-clearBasketButton.onclick = () => {
-    cart = []; // Clear cart
-    localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
-    updateBasketItems(); // Refresh the display
-};
-
-// Initial display update
-updateBasketItems();
+// Initial call to display items when the page loads
+displayCartItems();
