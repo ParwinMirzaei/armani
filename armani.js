@@ -1,47 +1,25 @@
-// Select the basket modal and close button
-const basketModal = document.getElementById('basketModal');
-const basketClose = document.getElementById('basketClose');
 const basketCount = document.getElementById('basketCount');
-const basketItems = document.getElementById('basketItems');
-const clearBasketButton = document.getElementById('clearBasket');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Array to hold items in the basket
-let cart = [];
+// Update basket count on page load
+function updateBasketCount() {
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    basketCount.textContent = totalItems;
+}
 
-// Function to add item to the cart
-function addToCart(item, quantity) {
-    const itemExists = cart.find(cartItem => cartItem.name === item);
-    if (itemExists) {
-        itemExists.quantity += parseInt(quantity);
+// Add item to cart
+function addToCart(itemName, quantity) {
+    const itemQuantity = parseInt(quantity);
+    const existingItem = cart.find(item => item.name === itemName);
+
+    if (existingItem) {
+        existingItem.quantity += itemQuantity;
     } else {
-        cart.push({ name: item, quantity: parseInt(quantity) });
+        cart.push({ name: itemName, quantity: itemQuantity });
     }
-    updateBasket();
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateBasketCount();
 }
 
-// Function to update the basket count and modal
-function updateBasket() {
-    basketCount.textContent = cart.reduce((acc, curr) => acc + curr.quantity, 0); // Update count
-    updateBasketItems(); // Update modal items
-}
-
-// Function to update basket items in the modal
-function updateBasketItems() {
-    basketItems.innerHTML = ''; // Clear current items
-    cart.forEach((item, index) => {
-        const itemDiv = document.createElement('div');
-        itemDiv.textContent = `${item.name} - Quantity: ${item.quantity}`;
-        
-        // Create remove button
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = () => {
-            removeFromCart(index); // Call remove function on click
-        };
-        
-        itemDiv.appendChild(removeButton);
-        basketItems.appendChild(itemDiv);
-    });
-}
-
-// Function to remove
+updateBasketCount();
