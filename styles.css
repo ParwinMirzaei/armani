@@ -103,6 +103,43 @@ nav .right a:hover {
     font-weight: bold;
 }
 
+/* Add these styles to your existing CSS file */
+
+/* Basket Items Container */
+#basketItems {
+    padding: 10px; /* Add padding around the items container */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: to differentiate the items */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin-top: 20px; /* Space above the basket items */
+}
+
+/* Individual Basket Item */
+#basketItems div {
+    display: flex; /* Use flexbox to arrange item and button */
+    justify-content: space-between; /* Space between item text and button */
+    align-items: center; /* Center vertically */
+    margin-bottom: 10px; /* Space between each item */
+    padding: 8px; /* Add some padding for better spacing */
+    border: 1px solid #ccc; /* Optional: border around each item */
+    border-radius: 5px; /* Optional: rounded corners for each item */
+    background-color: #f9f9f9; /* Optional: item background color */
+}
+
+/* Remove Button */
+#basketItems button {
+    background-color: #dc3545; /* Bootstrap red */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    padding: 5px 10px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#basketItems button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+
 
 /* SECTION 1: Home */
 #home {
