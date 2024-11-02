@@ -192,17 +192,18 @@ nav .right a:hover {
   }
   
   .image-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center; /* Center horizontally */
+    display: flex;                    /* Enable flexbox */
+    flex-direction: row;             /* Align items horizontally */
+    justify-content: space-between;    /* Space items evenly */
+    align-items: flex-start;          /* Align items at the start */
+    gap: 1rem;                        /* Gap between items */
   }
   
   .image-box {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    width: 300px; /* Fixed width for uniformity */
+    width: 300px;                     /* Fixed width for uniformity */
     text-align: center;
     transition: transform 0.3s ease;
   }
@@ -248,6 +249,7 @@ nav .right a:hover {
   .item-selection button:hover {
     background-color: #555;
   }
+  
   
 /* SECTION 3: Contact */
 .contact h1 {
