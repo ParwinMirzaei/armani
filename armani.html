@@ -20,10 +20,6 @@
     <div class="right">
         <a href="#home"><i class="fas fa-home"></i> Home</a>
         <a href="#shop"><i class="fas fa-laptop-code"></i> Shop</a>
-        <a href="cart.html" class="basket-icon" id="basketLink">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="basketCount">0</span> <!-- Basket item count -->
-        </a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 </nav>
@@ -47,25 +43,21 @@
     </div>
 </div>
 
+
 <!-- SECTION 2: Shop -->
 <div id="shop" class="shop">
     <h1 class="shop-heading">Shop</h1>
 
-    <div class="image-row">
-        <!-- Item 1 -->
-        <div class="image-box">
-            <img src="https://i.makeupstore.de/r/rd/rdppgfypx7b1.jpg" alt="In Love With You" width="300" height="250" />
-            <p>In Love With You</p>
-            <div class="item-selection">
-                <input type="number" value="1" min="1" id="item1-quantity" />
-                <button onclick="addToCart('In Love With You', document.getElementById('item1-quantity').value)">Add to Cart</button>
-            </div>
-        </div>
+    <!-- Product List - dynamically populated by JavaScript -->
+    <div class="image-row" id="product-list"></div>
+</div>
+
         
         <!-- Item 2 -->
         <div class="image-box">
             <img src="https://m.media-amazon.com/images/I/61XAym-FT2L.jpg" alt="Because It's You" width="300" height="250" />
             <p>Because It's You</p>
+            <p class="product--price">140 €</p>
             <div class="item-selection">
                 <input type="number" value="1" min="1" id="item2-quantity" />
                 <button onclick="addToCart('Because It\'s You', document.getElementById('item2-quantity').value)">Add to Cart</button>
@@ -76,6 +68,7 @@
         <div class="image-box">
             <img src="https://i1.perfumesclub.com/grande/108209-3.jpg" alt="Stronger With You" width="300" height="250" />
             <p>Stronger With You</p>
+            <p class="product--price">125 €</p>
             <div class="item-selection">
                 <input type="number" value="1" min="1" id="item3-quantity" />
                 <button onclick="addToCart('Stronger With You', document.getElementById('item3-quantity').value)">Add to Cart</button>
@@ -83,6 +76,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- SECTION 3: Contact Form -->
 <div id="contact" class="contact">
@@ -100,7 +94,7 @@
     </form>
 </div>
 
-<!-- SECTION 5: footer -->
+<!-- SECTION 4: footer -->
 <footer>
     <div class="container">
         <p>&copy; 2024 Giorgio Armani</p>
