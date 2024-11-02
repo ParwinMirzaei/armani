@@ -183,6 +183,20 @@ nav .right a:hover {
     padding: 2rem;
     text-align: center;
   }
+
+  /* Add space below the sorting dropdown */
+.products--sorting {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+  
+  .products--sorting label {
+    margin-right: 10px; /* Adds some space between the label and dropdown */
+  }
+  
+  .sort--dropdown {
+    padding: 5px; /* Optional: Makes the dropdown look nicer */
+  }
+  
   
   .shop-heading {
     font-family: 'Poppins', sans-serif;
