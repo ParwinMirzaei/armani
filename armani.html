@@ -48,35 +48,20 @@
 <div id="shop" class="shop">
     <h1 class="shop-heading">Shop</h1>
 
+ <!-- Sorting Dropdown -->
+ <div class="products--sorting">
+    <label for="sort">Sort by:</label>
+    <select id="sort" class="sort--dropdown">
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="name-asc">Name: A to Z</option>
+      <option value="name-desc">Name: Z to A</option>
+    </select>
+  </div>
+
     <!-- Product List - dynamically populated by JavaScript -->
     <div class="image-row" id="product-list"></div>
 </div>
-
-        
-        <!-- Item 2 -->
-        <div class="image-box">
-            <img src="https://m.media-amazon.com/images/I/61XAym-FT2L.jpg" alt="Because It's You" width="300" height="250" />
-            <p>Because It's You</p>
-            <p class="product--price">140 €</p>
-            <div class="item-selection">
-                <input type="number" value="1" min="1" id="item2-quantity" />
-                <button onclick="addToCart('Because It\'s You', document.getElementById('item2-quantity').value)">Add to Cart</button>
-            </div>
-        </div>
-        
-        <!-- Item 3 -->
-        <div class="image-box">
-            <img src="https://i1.perfumesclub.com/grande/108209-3.jpg" alt="Stronger With You" width="300" height="250" />
-            <p>Stronger With You</p>
-            <p class="product--price">125 €</p>
-            <div class="item-selection">
-                <input type="number" value="1" min="1" id="item3-quantity" />
-                <button onclick="addToCart('Stronger With You', document.getElementById('item3-quantity').value)">Add to Cart</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!-- SECTION 3: Contact Form -->
 <div id="contact" class="contact">
