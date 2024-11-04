@@ -28,12 +28,13 @@ function addToCart(productName, quantity) {
   alert(`${quantity} of ${productName} added to cart.`);
 }
 
-// Function to dynamically generate the product elements
+// Function to generate the product elements
 function generateProductElements() {
   const productContainer = document.getElementById("product-list");
   productContainer.innerHTML = ""; // Clear the container before rendering
 
   products.forEach((product) => {
+    console.log(`Generating product: ${product.name}`); // Debugging output
     const productElement = document.createElement("div");
     productElement.className = "image-box";
     productElement.innerHTML = `
@@ -49,6 +50,7 @@ function generateProductElements() {
     productContainer.appendChild(productElement);
   });
 }
+
 
 // Sorting function
 function sortProducts(criteria) {
@@ -73,16 +75,42 @@ document.getElementById("sort").addEventListener("change", (event) => {
 document.addEventListener("DOMContentLoaded", generateProductElements);
 
 // Array to hold cart items
+// Array to hold cart items
 const cart = []; 
 
 // Function to add items to the cart
+// Function to add items to the cart
 function addToCart(productName, quantity) {
-    const item = {
-        name: productName,
-        quantity: parseInt(quantity),
-    };
+  console.log(`Attempting to add to cart: ${productName}, Quantity: ${quantity}`); // Debugging output
+  const item = {
+      name: productName,
+      quantity: parseInt(quantity),
+  };
 
-    cart.push(item);
-    console.log(`${quantity} of ${productName} added to the cart`);
-    console.log(cart); // To check cart items in the console
+  // Add item to the cart array
+  cart.push(item);
+  console.log(`${quantity} of ${productName} added to the cart`); // Debugging output
+  console.log(cart); // To check cart items in the console
+
+  // Update cart display on the page
+  displayCart();
+}
+
+
+// Function to display cart items on the page
+function displayCart() {
+    const cartContainer = document.getElementById("cart-items");
+    cartContainer.innerHTML = ""; // Clear previous cart content
+
+    // Check if cart is empty
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+        // Generate HTML for each item in the cart
+        cart.forEach(item => {
+            const cartItem = document.createElement("p");
+            cartItem.textContent = `${item.quantity} of ${item.name}`;
+            cartContainer.appendChild(cartItem);
+        });
+    }
 }
