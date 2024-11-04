@@ -49,7 +49,11 @@ function generateProductElements() {
     `;
     productContainer.appendChild(productElement);
   });
+
+  // Display initial cart status
+  displayCart();
 }
+
 
 
 // Sorting function
@@ -72,9 +76,11 @@ document.getElementById("sort").addEventListener("change", (event) => {
 });
 
 // Initial product rendering
-document.addEventListener("DOMContentLoaded", generateProductElements);
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Page loaded, running generateProductElements");
+  generateProductElements();
+});
 
-// Array to hold cart items
 // Array to hold cart items
 const cart = []; 
 
