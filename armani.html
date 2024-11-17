@@ -15,14 +15,16 @@
 <!-- NAVBAR -->
 <nav>
     <div class="left">
-        <img src="giorgio-armani-icon-logo-symbol-600nw-2425801211.webp" alt="Armani logo" width="200" height="auto">
+        <img src="/images/giorgio-armani-icon-logo-symbol-600nw-2425801211.webp" alt="Armani logo" width="200" height="auto">
     </div>
     <div class="right">
         <a href="#home"><i class="fas fa-home"></i> Home</a>
         <a href="#shop"><i class="fas fa-laptop-code"></i> Shop</a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+
     </div>
 </nav>
+    
 
 <main>
 
@@ -31,51 +33,61 @@
     <div class="home-content">
         <!-- Left side content -->
         <div class="left-content">
-            <h1><b>"We Are the Whisper of Unforgettable Moments"</b></h1>
+            <h1><b>We Are the Whisper of Unforgettable Moments</b></h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos odio ut similique. Temporibus voluptate earum eaque, necessitatibus et obcaecati! Voluptates, atque! Ad necessitatibus excepturi dolorem, ullam possimus in doloribus rem nemo odit voluptatum, exercitationem ab minus. Error dolor modi id illo sequi perspiciatis, consequatur suscipit ullam impedit obcaecati mollitia ducimus?</p>
         </div>
 
         <!-- Right side content -->
         <div class="right-content">
-            <h1>"At Armani, Every Fragrance is a Whisper You’ll Never Forget."</h1>
+            <h1>At Armani, Every Fragrance is a Whisper You’ll Never Forget.</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ea doloribus molestiae, hic nulla fugiat officiis. Velit quam odit id expedita itaque, ad necessitatibus harum nesciunt laboriosam accusamus sit ut dolore quis eveniet vel, consequatur vitae adipisci non eius, optio magni amet in blanditiis corrupti! Dolore non maiores quas exercitationem?</p>
         </div>
     </div>
 </div>
-
-
 <!-- SECTION 2: Shop -->
 <div id="shop" class="shop">
     <h1 class="shop-heading">Shop</h1>
 
- <!-- Sorting Dropdown -->
- <div class="products--sorting">
-    <label for="sort">Sort by:</label>
-    <select id="sort" class="sort--dropdown">
-      <option value="price-asc">Price: Low to High</option>
-      <option value="price-desc">Price: High to Low</option>
-      <option value="name-asc">Name: A to Z</option>
-      <option value="name-desc">Name: Z to A</option>
-    </select>
-  </div>
+    <!-- Sort options (optional, as part of the milestone) -->
+    <div class="products--sorting">
+        <label for="sort">Sort by:</label>
+        <select id="sort" class="sort--dropdown">
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+            <option value="name">Name</option>
+        </select>
+    </div>
 
-    <!-- Product List - populated by JavaScript -->
-    <div class="image-row" id="product-list"></div>
+    <!-- Product list container -->
+    <div class="image-row" id="productList">
+        <!-- Product items will be dynamically added here -->
+    </div>
 </div>
 
-<!-- CART SECTION -->
-<div id="cart" class="cart">
-    <h2>Your Cart</h2>
-    <div id="cart-items"></div>
+
+<!-- Cart Modal -->
+<div id="modalCart" class="modal-cart">
+    <div class="modal-cart-content">
+        <span class="modal-cart-close">&times;</span>
+        <h1>Shopping Cart</h1>
+        <p>Your cart is empty.</p>
+        <!-- Total Price Button -->
+        <button id="totalPriceButton">Total Price</button>
+        <!-- Checkout Button -->
+        <button id="checkoutButton">Checkout</button>
+    </div>
 </div>
 
+<!-- Cart Button -->
+<button id="cartLink" class="cartLink">Shopping Cart</button>
+
+ 
 <!-- SECTION 3: Contact Form -->
 <div id="contact" class="contact">
     <h1>Contact Us</h1>
     <form>
         <label for="name">Name</label>
         <input id="name" type="text" name="name" placeholder="Enter your name" required>
-
         <label for="email">Email</label>
         <input id="email" type="text" name="email" placeholder="Enter your email" required>
 
@@ -83,9 +95,8 @@
         <textarea name="message" rows="5" cols="30" placeholder="Enter your message" required></textarea>
         <input id="message" type="submit" name="submit" value="Send Message">
     </form>
-</div>
-
-<!-- SECTION 4: footer -->
+</main>
+<!-- SECTION 4: Section -->
 <footer>
     <div class="container">
         <p>&copy; 2024 Giorgio Armani</p>
@@ -93,11 +104,10 @@
             <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
             <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
             <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+
         </div>
     </div>
 </footer>
-</main>
-
-<script src="armani.js"></script>
 </body>
+<script src="app.js"></script>
 </html>
